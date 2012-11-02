@@ -1,0 +1,13 @@
+- content_for :sidebar do
+  = render :inline => @sidebar.content , :type => :slim
+.dos-head
+  .row-fluid
+    .span12
+      ul.nav.nav-pills.pull-right
+        li
+          a href="#" ="新建" 
+        li
+          a href="#" ="编辑"
+        li
+          a href="#" ="历史"
+== @page.to_html
