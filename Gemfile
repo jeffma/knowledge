@@ -6,12 +6,16 @@ source "http://rubygems.org"
 gemspec
 
 # jquery-rails is used by the dummy application
-gem "jquery-rails"
+group :assets do
+  gem "jquery-rails"
+  gem "bootstrap-sass" 
+end
 gem "grit"
 gem "slim"
 gem "slim-rails"
 gem "github-markdown"
 gem "kaminari"
+gem "stringex"
 gem 'rspec-rails', :group => [:development, :test]
 gem 'factory_girl_rails', :group => :test
 # Declare any dependencies that are still in development here instead of in

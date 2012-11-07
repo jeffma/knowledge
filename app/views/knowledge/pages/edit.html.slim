@@ -1,0 +1,48 @@
+- content_for :head do
+  = stylesheet_link_tag "knowledge/markitup/skins/simple/style","knowledge/markitup/sets/markdown/style", :media => "all"
+  = javascript_include_tag "knowledge/markitup/jquery.markitup","knowledge/markitup/sets/markdown/set"
+javascript:
+  $(document).ready(function() {
+      $("#markItUp-editor").markItUp(mySettings);
+   });
+- content_for :sidebar do
+  = render :inline => @sidebar.content , :type => :slim
+.docs-head
+  .row-fluid
+    .span12
+      ul.nav.nav-pills.pull-right
+        li
+          form.form-search
+            .input-append
+              input.input-large.search-query type="text" placeholder="请输入关键字"
+              button.btn type="submit" = "Go!"
+        li
+          a href="#show-page-dialog" data-toggle="modal" ="新建"
+        li class="active"
+          a  href="#{@edit_path}" ="编辑"
+        li
+          a  href="#{@wiki_root}" ="历史"
+#show-page-dialog.modal.hide.fade
+  =form_tag("#{@wiki_root}/pages/new",:class=>"form-horizontal") do
+    .modal-header
+      button.close data-dismiss="modal" aria-hidden="true" =="&times;"
+      h3 ="新建词条"
+    .modal-body
+      .control-group
+        label.control-label ="路径"
+        .controls
+          input.input-xlarge name="path" placeholder="请输入git目录下的相对路径"
+    .modal-footer
+      a.btn href="#" data-dismiss="modal" aria-hidden="true" ="关闭"
+      button.btn.btn-primary type="submit" ="进入编辑"
+form action="/wiki/pages/#{params[:page]}/update" method="post"
+  .row-fluid
+    .span12
+      textarea id="markItUp-editor" class="markItUp" name="content"
+        = render :inline => @page.content
+  .row-fluid
+    .span12
+      #wikiPreview style="display:none"
+  .row-fluid
+    .span12
+      button.btn type="submit" ="保存"

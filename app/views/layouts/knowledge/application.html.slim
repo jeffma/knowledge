@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    meta content="width=device-width,initial-scale=1.0" name="viewport"
+    meta http-equiv="content-type" content="text/html;charset=UTF-8"
+    title= content_for?(:title) ? yield(:title) : "wiki"
+    meta content=(content_for?(:description) ? yield(:description) :"Big Banyan's wiki") name="description"
+    = stylesheet_link_tag "knowledge/application", :media => "all"
+    = javascript_include_tag "knowledge/application"
+    = yield(:head)
+    = csrf_meta_tags
+
+  body class="#{controller_name} #{action_name}"
+    header.navbar.navbar-fixed-top
+      nav.navbar-inner
+        .container
+          = render 'layouts/knowledge/navigation'
+    #main role="main"
+      - if content_for?(:sidebar)
+        .container-fluid
+          .row-fluid
+            .span2
+              = yield(:sidebar)
+            .span10
+              = render 'layouts/knowledge/messages'
+              = yield
+      - else
+        .container
+          .row
+            .span12
+              = render 'layouts/knowledge/messages'
+              = yield
+    footer

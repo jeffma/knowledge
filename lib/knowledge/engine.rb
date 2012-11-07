@@ -5,5 +5,8 @@ module Knowledge
       g.template_engine :slim
       g.test_framework  :rspec
     end
+    initializer "static assets" do |app|
+      app.middleware.use ::ActionDispatch::Static, "#{root}/public"
+    end
   end
 end

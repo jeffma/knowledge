@@ -1,0 +1,9 @@
+$navbarBackground: black;
+$navbarBackgroundHighlight: #222222;
+$navbarText: #777777;
+$navbarLinkColor: #999999;
+$navbarLinkColorHover: white;
+$navbarLinkColorActive: white;
+@import "bootstrap";
+body { padding-top: 60px; }
+@import "bootstrap-responsive";

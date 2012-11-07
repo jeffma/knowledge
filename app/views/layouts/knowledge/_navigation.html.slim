@@ -1,0 +1,26 @@
+= link_to "Big Banyan", main_app.root_path, :class => 'brand'
+ul.nav
+  - if session[:current_app] == 'wiki'
+    li class='active'
+      = link_to "Wiki", "/wiki"
+  - else
+    li
+      = link_to "Wiki", "/wiki"
+  li
+    = link_to "Test", "#"
+ul.nav.pull-right
+  - if user_signed_in?
+    li
+      = link_to 'Logout', main_app.destroy_user_session_path, :method=>'delete'
+  - else
+    li
+      = link_to 'Login', main_app.new_user_session_path
+  - if user_signed_in?
+    li
+      = link_to 'Edit account', main_app.edit_user_registration_path
+    - if current_user.has_role? :admin
+      li
+        = link_to 'Admin', main_app.users_path
+  - else
+    li
+      = link_to 'Sign up', main_app.new_user_registration_path

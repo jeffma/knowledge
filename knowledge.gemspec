@@ -18,7 +18,9 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2.8"
   s.add_dependency "jquery-rails"
   s.add_dependency "grit"
+  s.add_dependency "stringex"
   s.add_dependency "slim"
   s.add_dependency "kaminari"
   s.add_dependency "github-markdown"
+  s.add_dependency "bootstrap-sass"
 end
