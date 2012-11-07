@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Knowledge::VERSION
   s.authors     = ["Jeff Ma"]
   s.email       = ["mjf429@163.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Knowledge."
-  s.description = "TODO: Description of Knowledge."
+  s.homepage    = "majinfeng.sistersparty.com"
+  s.summary     = "zumkum's wiki plugin"
+  s.description = "Zumkum's wiki plugin"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
