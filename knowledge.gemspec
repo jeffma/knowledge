@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Knowledge::VERSION
   s.authors     = ["Jeff Ma"]
   s.email       = ["mjf429@163.com"]
-  s.homepage    = "majinfeng.sistersparty.com"
+  s.homepage    = "http://majinfeng.sistersparty.com"
   s.summary     = "zumkum's wiki plugin"
   s.description = "Zumkum's wiki plugin"
 
