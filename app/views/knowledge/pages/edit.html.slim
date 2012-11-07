@@ -39,7 +39,7 @@ form action="/wiki/pages/#{params[:page]}/update" method="post"
   .row-fluid
     .span12
       textarea id="markItUp-editor" class="markItUp" name="content"
-        = render :inline => @page.content
+        = render :text => @page.content
   .row-fluid
     .span12
       #wikiPreview style="display:none"
