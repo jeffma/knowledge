@@ -42,5 +42,8 @@ form action="/wiki/pages/#{params[:page]}/update" method="post"
       #wikiPreview style="display:none"
   .row-fluid
     .span12
-      button.btn type="submit" ="保存"
-      a.btn.btn-primary href="/wiki/pages/#{params[:page]}" = "返回"
+      ul.nav
+        li
+          button.btn.btn-primary type="submit" ="保存"
+        li
+          a.btn href="/wiki/pages/#{params[:page]}" = "返回"
