@@ -53,6 +53,7 @@
 	background-image:url(images/preview.png);
 }
 #wikiPreview{
+  width:100%;
   border:1px solid #eeeeee;
   padding:20px;
   height:320px;

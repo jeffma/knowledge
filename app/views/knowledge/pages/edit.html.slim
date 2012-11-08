@@ -37,7 +37,7 @@ form action="/wiki/pages/#{params[:page]}/update" method="post"
     .span12
       textarea id="markItUp-editor" class="markItUp" name="content"
         = @page.content.force_encoding('UTF-8')
-    .span12
+      br
       #wikiPreview style="display:none;"
   .row-fluid
     .span12
