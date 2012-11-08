@@ -22,7 +22,7 @@
 	font:12px 'Courier New', Courier, monospace;
 	padding:5px;
 	width:98;
-	height:350px;
+	height:320px;
 	clear:both;
 	line-height:18px;
 	overflow:auto;
@@ -49,7 +49,7 @@
 /* first row of buttons */
 .markItUpHeader ul li	{
 	list-style:none;
-	float:left;
+	display:inline;
 	position:relative;
 }
 .markItUpHeader ul li:hover > ul{

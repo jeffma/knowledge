@@ -56,6 +56,7 @@
   width:100%;
   border:1px solid #eeeeee;
   padding:20px;
+  margin:5px 0 5px 0;
   height:320px;
   overflow-y:auto;
 }
