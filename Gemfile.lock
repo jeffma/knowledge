@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    knowledge (0.0.2)
+    knowledge (0.0.6)
       bootstrap-sass
       github-markdown
       grit
