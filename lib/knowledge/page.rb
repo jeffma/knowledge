@@ -86,6 +86,7 @@ module Knowledge
     def update_content(new_content,path)
       return if new_content == content
       file_name = File.join(self.class.repository.working_dir, path + ".md")
+      FileUtils.mkdir_p(File.dirname(file_name))
       File.open(file_name, "w") { |f| f << new_content }
       add_to_index_and_commit!(path+".md")
     end
