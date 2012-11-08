@@ -37,9 +37,9 @@ form action="/wiki/pages/#{params[:page]}/update" method="post"
     .span12
       textarea id="markItUp-editor" class="markItUp" name="content"
         = @page.content.force_encoding('UTF-8')
+      #wikiPreview style="display:none;"
   .row-fluid
     .span12
-      #wikiPreview style="display:none"
   .row-fluid
     .span12
       button.btn.btn-primary type="submit" style="margin-right:1em;" ="保存"
